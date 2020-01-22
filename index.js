@@ -15,12 +15,13 @@ var port       = port = process.env.PORT || 3000,
 var path = require ('path')*/
 
 const bodyParser = require('body-parser');
-
+const  http       = require('http');
+const Server     = http.createServer(app)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static('./public'))
 app.get('/*',function(req,res){
-  res.sendFile(path.join(__dirname+'/public/'))
+  res.sendFile(path.join(__dirname+'/public'))
 
 })
 
@@ -29,7 +30,7 @@ app.use('/bdjson', routing)
   console.log("Servidor corriendo en el puerto: " + port)
 })*/
 
-app.listen(process.env.PORT, async () => {
+Server.listen(process.env.PORT, async () => {
   console.log('Escuchando puerto: ', process.env.PORT);
   
 });
