@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
   console.log('Invocando desde directorio raiz')
   Storage.getAllData()
     .then((data) => {
+      console.log(data);
       res.json(data)
     }).catch((error) =>{
       res.sendStatus(500).json(error)

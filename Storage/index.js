@@ -10,8 +10,15 @@ module.exports = {
      console.log(dataPath)
     return new Promise ((resolve, reject) =>{
         fs.readFile (dataPath, 'utf8', (err, readData) =>{
-        if (err) reject (err)
-        else resolve(JSON.parse(readData))
+        if (err){
+          reject (err);
+          console.log('Un error')
+        }
+
+        else {
+          console.log('no hay error va JSON');
+          resolve(JSON.parse(readData))
+              }
       })
     })
   }
