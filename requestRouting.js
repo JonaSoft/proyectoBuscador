@@ -1,7 +1,7 @@
 
 var express = require('express');
 var router = express.Router();
-var Storage = require('./storage')
+var Storage = require('./Storage')
 
 
 router.get('/', (req, res) => {

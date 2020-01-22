@@ -1,8 +1,9 @@
-require('./server/config/config');
+require('./config/config');
 const express = require('express');
 const app = express();
 const cors = require('cors');
-routing    = require('./server/requestRouting')
+routing    = require('./requestRouting');
+const path = require ('path')
 /*var bodyParser = require('body-parser'),
     http       = require('http'),
     express    = require('express')
@@ -19,7 +20,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static('./public'))
 app.get('/*',function(req,res){
-  res.sendFile(path.join(__dirname+'./public/index.html'))
+  res.sendFile(path.join(__dirname+'/public/'))
 
 })
 
