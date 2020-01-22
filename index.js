@@ -18,8 +18,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static('./public'))
-app.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'./public'))
+app.get('/*',function(req,res){
+  res.sendFile(path.join(__dirname+'./public/index.html'))
 
 })
 

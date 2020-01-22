@@ -1,8 +1,15 @@
 {
-  "name": "proyectobuscador",
+  "name": "proyectobuscadorpropiedades",
   "version": "1.0.0",
   "description": "proyecto buscador con node.js",
-  "main": "./index.js",
+  "main": "index.js",
+
+  "scripts": {
+    "start": "node index.js",
+    "nodemon": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -10,10 +17,7 @@
     "json-query": "^2.2.2"
   },
   "devDependencies": {},
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  
   "author": "Carlos Ucañán Barrera",
   "license": "ISC"
 }
