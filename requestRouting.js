@@ -1,7 +1,8 @@
 
-var express = require('express');
-var router = express.Router();
-var Storage = require('./Storage')
+/*jshint esversion: 8 */
+let express = require('express');
+let router = express.Router();
+let Storage = require('./Storage')
 
 
 router.get('/', (req, res) => {

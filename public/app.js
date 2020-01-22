@@ -65,7 +65,7 @@ function mostrarData(data){
 }
 // funcion para cargar y mostrar opciones por seleccionar de ciudad y tipo
 function cargarData(select, dataArray, tipo){
-  let seleccion = [... new Set(dataArray.map(item => item[tipo]))]
+  let seleccion = [... new Set(dataArray.map((item) => item[tipo]))]
   for (var i = 0; i < seleccion.length; i++){
     select.append($("<option></option>").attr("value", seleccion[i]).text(seleccion[i]));
   }
